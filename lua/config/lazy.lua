@@ -51,3 +51,22 @@ require("lazy").setup({
     },
   },
 })
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<C-p>', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- Normal mode
+vim.api.nvim_set_keymap('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-Tab>', ':bprevious<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-z>', ':bp | bd #<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-z>', ':bp | bd #<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Left>', '<C-w>h', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Right>', '<C-w>h', { noremap = true, silent = true })
+
+-- Terminal mode
+vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+
+
