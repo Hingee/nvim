@@ -10,3 +10,11 @@ lspconfig.rust_analyzer.setup({
   },
 })
 
+lspconfig.wgsl_analyzer.setup({
+    cmd = { "wgsl-analyzer" },
+    filetypes = { "wgsl" },
+    root_dir = lspconfig.util.root_pattern(".git", "wgsl"),
+})
+
+
+
